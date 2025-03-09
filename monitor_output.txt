@@ -1,0 +1,4 @@
+               30110 ns | cpu_status = 20
+               36600 ns | tb_status = 28
+               39850 ns | tb_status_change = 32
+               43100 ns | result = 36

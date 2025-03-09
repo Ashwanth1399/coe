@@ -1,0 +1,236 @@
+# vsim -f questa.tops -coverage -c -wlf wave.wlf "+select=12" "+firmware=hx8kdemo_fw.hex" -do "coverage clear; coverage save -onexit coverage.ucdb ; add wave -r /*; run -all ; exit" 
+# Start time: 12:37:45 on Mar 09,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-13408) Code coverage will be disabled for some DUs/packages/classes and source files.
+# ** Warning: picosoc.v(302): (vopt-2685) [TFMPC] - Too few port connections for 'cpu'.  Expected 27, found 10.
+# ** Warning: picosoc.v(302): (vopt-2718) [TFMPC] - Missing connection for port 'trace_data'.
+# ** Warning: picosoc.v(302): (vopt-2718) [TFMPC] - Missing connection for port 'trace_valid'.
+# ** Warning: picosoc.v(302): (vopt-2718) [TFMPC] - Missing connection for port 'eoi'.
+# ** Warning: picosoc.v(302): (vopt-2718) [TFMPC] - Missing connection for port 'pcpi_ready'.
+# ** Warning: picosoc.v(302): (vopt-2718) [TFMPC] - Missing connection for port 'pcpi_wait'.
+# ** Warning: picosoc.v(302): (vopt-2718) [TFMPC] - Missing connection for port 'pcpi_rd'.
+# ** Warning: picosoc.v(302): (vopt-2718) [TFMPC] - Missing connection for port 'pcpi_wr'.
+# ** Warning: picosoc.v(302): (vopt-2718) [TFMPC] - Missing connection for port 'pcpi_rs2'.
+# ** Warning: picosoc.v(302): (vopt-2718) [TFMPC] - Missing connection for port 'pcpi_rs1'.
+# ** Warning: picosoc.v(302): (vopt-2718) [TFMPC] - Missing connection for port 'pcpi_insn'.
+# ** Warning: picosoc.v(302): (vopt-2718) [TFMPC] - Missing connection for port 'pcpi_valid'.
+# ** Warning: picosoc.v(302): (vopt-2718) [TFMPC] - Missing connection for port 'mem_la_wstrb'.
+# ** Warning: picosoc.v(302): (vopt-2718) [TFMPC] - Missing connection for port 'mem_la_wdata'.
+# ** Warning: picosoc.v(302): (vopt-2718) [TFMPC] - Missing connection for port 'mem_la_addr'.
+# ** Warning: picosoc.v(302): (vopt-2718) [TFMPC] - Missing connection for port 'mem_la_write'.
+# ** Warning: picosoc.v(302): (vopt-2718) [TFMPC] - Missing connection for port 'mem_la_read'.
+# ** Warning: picosoc.v(302): (vopt-2718) [TFMPC] - Missing connection for port 'trap'.
+# ** Warning: hx8kdemo.v(67): (vopt-2685) [TFMPC] - Too few port connections for 'flash_io_buf'.  Expected 10, found 4.
+# ** Warning: hx8kdemo.v(67): (vopt-2718) [TFMPC] - Missing connection for port 'D_IN_1'.
+# ** Warning: hx8kdemo.v(67): (vopt-2718) [TFMPC] - Missing connection for port 'D_OUT_1'.
+# ** Warning: hx8kdemo.v(67): (vopt-2718) [TFMPC] - Missing connection for port 'OUTPUT_CLK'.
+# ** Warning: hx8kdemo.v(67): (vopt-2718) [TFMPC] - Missing connection for port 'INPUT_CLK'.
+# ** Warning: hx8kdemo.v(67): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK_ENABLE'.
+# ** Warning: hx8kdemo.v(67): (vopt-2718) [TFMPC] - Missing connection for port 'LATCH_INPUT_VALUE'.
+# ** Warning: hx8kdemo.v(101): (vopt-2685) [TFMPC] - Too few port connections for 'soc'.  Expected 33, found 27.
+# ** Warning: hx8kdemo.v(101): (vopt-2718) [TFMPC] - Missing connection for port 'fifo2_full'.
+# ** Warning: hx8kdemo.v(101): (vopt-2718) [TFMPC] - Missing connection for port 'fifo2_wr_en'.
+# ** Warning: hx8kdemo.v(101): (vopt-2718) [TFMPC] - Missing connection for port 'fifo2_wdata'.
+# ** Warning: hx8kdemo.v(101): (vopt-2718) [TFMPC] - Missing connection for port 'fifo1_empty'.
+# ** Warning: hx8kdemo.v(101): (vopt-2718) [TFMPC] - Missing connection for port 'fifo1_rdata'.
+# ** Warning: hx8kdemo.v(101): (vopt-2718) [TFMPC] - Missing connection for port 'fifo1_rd_en'.
+# ** Warning: hx8kdemo_tb.sv(186): (vopt-2685) [TFMPC] - Too few port connections for 'uut'.  Expected 18, found 10.
+# ** Warning: hx8kdemo_tb.sv(186): (vopt-2718) [TFMPC] - Missing connection for port 'debug_flash_io3'.
+# ** Warning: hx8kdemo_tb.sv(186): (vopt-2718) [TFMPC] - Missing connection for port 'debug_flash_io2'.
+# ** Warning: hx8kdemo_tb.sv(186): (vopt-2718) [TFMPC] - Missing connection for port 'debug_flash_io1'.
+# ** Warning: hx8kdemo_tb.sv(186): (vopt-2718) [TFMPC] - Missing connection for port 'debug_flash_io0'.
+# ** Warning: hx8kdemo_tb.sv(186): (vopt-2718) [TFMPC] - Missing connection for port 'debug_flash_clk'.
+# ** Warning: hx8kdemo_tb.sv(186): (vopt-2718) [TFMPC] - Missing connection for port 'debug_flash_csb'.
+# ** Warning: hx8kdemo_tb.sv(186): (vopt-2718) [TFMPC] - Missing connection for port 'debug_ser_rx'.
+# ** Warning: hx8kdemo_tb.sv(186): (vopt-2718) [TFMPC] - Missing connection for port 'debug_ser_tx'.
+# ** Warning: uart_vip/src/env/uart_if.sv(26): (vopt-3838) Variable 'rx' written by continuous and procedural assignments. 
+# One of the assignments is implicit. See hx8kdemo_tb.sv(190). Variable is procedurally driven by rx in clocking block masterdrv_cb. See (uart_vip/src/env/uart_if.sv:33).
+# 
+# ** Warning: uart_vip/src/env/uart_if.sv(26): (vopt-3838) Variable 'rx' written by continuous and procedural assignments. 
+# One of the assignments is implicit. See hx8kdemo_tb.sv(190). Variable is procedurally driven by rx in clocking block slavedrv_cb. See (uart_vip/src/env/uart_if.sv:47).
+# 
+# ** Note: (vopt-143) Recognized 2 FSMs in module "picorv32(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "spimemio(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "APB_BUS(fast)".
+# ** Warning: picorv32.v(2680): (vopt-2685) [TFMPC] - Too few port connections for 'picorv32_core'.  Expected 27, found 22.
+# ** Warning: picorv32.v(2680): (vopt-2718) [TFMPC] - Missing connection for port 'mem_la_wstrb'.
+# ** Warning: picorv32.v(2680): (vopt-2718) [TFMPC] - Missing connection for port 'mem_la_wdata'.
+# ** Warning: picorv32.v(2680): (vopt-2718) [TFMPC] - Missing connection for port 'mem_la_addr'.
+# ** Warning: picorv32.v(2680): (vopt-2718) [TFMPC] - Missing connection for port 'mem_la_write'.
+# ** Warning: picorv32.v(2680): (vopt-2718) [TFMPC] - Missing connection for port 'mem_la_read'.
+# ** Note: (vopt-143) Recognized 2 FSMs in module "picorv32(fast__1)".
+# ** Warning: picorv32.v(2944): (vopt-2685) [TFMPC] - Too few port connections for 'picorv32_core'.  Expected 27, found 22.
+# ** Warning: picorv32.v(2944): (vopt-2718) [TFMPC] - Missing connection for port 'mem_la_wstrb'.
+# ** Warning: picorv32.v(2944): (vopt-2718) [TFMPC] - Missing connection for port 'mem_la_wdata'.
+# ** Warning: picorv32.v(2944): (vopt-2718) [TFMPC] - Missing connection for port 'mem_la_addr'.
+# ** Warning: picorv32.v(2944): (vopt-2718) [TFMPC] - Missing connection for port 'mem_la_write'.
+# ** Warning: picorv32.v(2944): (vopt-2718) [TFMPC] - Missing connection for port 'mem_la_read'.
+# ** Note: (vopt-143) Recognized 1 FSM in module "picorv32_wb(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=56.
+# //  Questa Sim-64
+# //  Version 2022.4_3 linux_x86_64 Feb  3 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.picorv32_regs(fast)
+# Loading work.picorv32_axi(fast)
+# Loading work.picorv32_wb(fast)
+# Loading sv_std.std
+# Loading work.uart_if(fast)
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.test_pkg(fast)
+# Loading work.hx8kdemo_tb_sv_unit(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.fifo_coverage(fast)
+# Loading work.testbench(fast)
+# ** Warning: (vsim-3764) Stand-alone call to function 'get' treated as implicit void cast.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: hx8kdemo_tb.sv Line: 293
+# ** Warning: (vsim-3764) Stand-alone call to function 'get' treated as implicit void cast.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: hx8kdemo_tb.sv Line: 263
+# ** Warning: (vsim-3838) Variable '/testbench/intf/rx' written by continuous and procedural assignments. 
+# One of the assignments is implicit. See hx8kdemo_tb.sv(190).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/intf File: uart_vip/src/env/uart_if.sv Line: 26
+# ** Warning: (vsim-3838) Variable '/testbench/intf/rx' written by continuous and procedural assignments. 
+# One of the assignments is implicit. See hx8kdemo_tb.sv(190).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/intf File: uart_vip/src/env/uart_if.sv Line: 26
+# Compiling /tmp/moulidharan.rathinakumar@coeserver_dpi_97866/linux_x86_64_gcc-7.4.0/exportwrapper.c
+# Loading /tmp/moulidharan.rathinakumar@coeserver_dpi_97866/linux_x86_64_gcc-7.4.0/vsim_auto_compile.so
+# Loading /tools/questa-2022.4.3/questasim/uvm-1.2/linux_x86_64/uvm_dpi.so
+# ** Warning: (vsim-8806) Task "write_mon_rx2scb" is being called in function "write".
+#    Time: 0 ps  Iteration: 0  Instance: /picorv32_regs File: scoreboard.sv Line: 4
+# ** Warning: (vsim-8806) Task "write_mon_tx2scb" is being called in function "write".
+#    Time: 0 ps  Iteration: 0  Instance: /picorv32_regs File: scoreboard.sv Line: 3
+# coverage clear
+#  coverage save -onexit coverage.ucdb 
+#  add wave -r /*
+#  run -all 
+# UVM_INFO verilog_src/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+# ----------------------------------------------------------------
+# UVM-1.2
+# (C) 2007-2014 Mentor Graphics Corporation
+# (C) 2007-2014 Cadence Design Systems, Inc.
+# (C) 2006-2014 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# (C) 2013-2014 NVIDIA Corporation
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# select=         12
+# UVM_INFO @ 0: reporter [RNTST] Running test base_test...
+# UVM_INFO verilog_src/uvm-1.2/src/base/uvm_root.svh(579) @ 0: reporter [UVMTOP] UVM testbench topology:
+# -------------------------------------------------------------------
+# Name                       Type                         Size  Value
+# -------------------------------------------------------------------
+# uvm_test_top               base_test                    -     @361 
+#   envh                     tb                           -     @373 
+#     ragent                 slave_agent                  -     @518 
+#       monh                 slave_monitor                -     @535 
+#         mon_rx2scb         uvm_analysis_port            -     @543 
+#     scb                    scoreboard                   -     @526 
+#       rx2scb               uvm_analysis_imp_mon_rx2scb  -     @566 
+#       tx2scb               uvm_analysis_imp_mon_tx2scb  -     @557 
+#     v_seqrh                virtual_sequencer            -     @387 
+#       rsp_export           uvm_analysis_export          -     @395 
+#       seq_item_export      uvm_seq_item_pull_imp        -     @501 
+#       arbitration_queue    array                        0     -    
+#       lock_queue           array                        0     -    
+#       num_last_reqs        integral                     32    'd1  
+#       num_last_rsps        integral                     32    'd1  
+#     wagent                 master_agent                 -     @510 
+#       drvh                 master_driver                -     @598 
+#         rsp_port           uvm_analysis_port            -     @615 
+#         seq_item_port      uvm_seq_item_pull_port       -     @606 
+#       monh                 master_monitor               -     @581 
+#         mon_tx2scb         uvm_analysis_port            -     @589 
+#       seqr                 master_sequencer             -     @624 
+#         rsp_export         uvm_analysis_export          -     @632 
+#         seq_item_export    uvm_seq_item_pull_imp        -     @738 
+#         arbitration_queue  array                        0     -    
+#         lock_queue         array                        0     -    
+#         num_last_reqs      integral                     32    'd1  
+#         num_last_rsps      integral                     32    'd1  
+# -------------------------------------------------------------------
+# 
+# ------------------------------------------------------------------------------------
+# Name                           Type        Size  Value                              
+# ------------------------------------------------------------------------------------
+# req                            master_xtn  -     @790                               
+#   tx_data                      integral    8     'b1100                             
+#   begin_time                   time        64    10000                              
+#   depth                        int         32    'd2                                
+#   parent sequence (name)       string      5     m_seq                              
+#   parent sequence (full name)  string      35    uvm_test_top.envh.wagent.seqr.m_seq
+#   sequencer                    string      29    uvm_test_top.envh.wagent.seqr      
+# ------------------------------------------------------------------------------------
+# 00000000
+# 00000001
+# 00000011
+# 00000111
+# 00001111
+# UVM_INFO uart_vip/src/slave_agent/slave_monitor.sv(115) @ 905030000: uvm_test_top.envh.ragent.monh [slave_monitor] rx data = 255
+# UVM_INFO uart_vip/src/slave_agent/slave_monitor.sv(115) @ 926110000: uvm_test_top.envh.ragent.monh [slave_monitor] rx data = 255
+# UVM_INFO uart_vip/src/slave_agent/slave_monitor.sv(115) @ 947190000: uvm_test_top.envh.ragent.monh [slave_monitor] rx data = 255
+# UVM_INFO uart_vip/src/slave_agent/slave_monitor.sv(115) @ 968270000: uvm_test_top.envh.ragent.monh [slave_monitor] rx data = 255
+# UVM_INFO uart_vip/src/slave_agent/slave_monitor.sv(115) @ 989350000: uvm_test_top.envh.ragent.monh [slave_monitor] rx data = 255
+# UVM_INFO uart_vip/src/slave_agent/slave_monitor.sv(115) @ 1010430000: uvm_test_top.envh.ragent.monh [slave_monitor] rx data = 255
+# UVM_INFO uart_vip/src/slave_agent/slave_monitor.sv(115) @ 1031510000: uvm_test_top.envh.ragent.monh [slave_monitor] rx data = 255
+# UVM_INFO uart_vip/src/slave_agent/slave_monitor.sv(115) @ 1052590000: uvm_test_top.envh.ragent.monh [slave_monitor] rx data = 255
+# UVM_INFO uart_vip/src/slave_agent/slave_monitor.sv(115) @ 1073670000: uvm_test_top.envh.ragent.monh [slave_monitor] rx data = 255
+# UVM_INFO uart_vip/src/slave_agent/slave_monitor.sv(117) @ 1115210000: uvm_test_top.envh.ragent.monh [slave_monitor] rx data =B
+# UVM_INFO uart_vip/src/slave_agent/slave_monitor.sv(117) @ 1136290000: uvm_test_top.envh.ragent.monh [slave_monitor] rx data =o
+# UVM_INFO uart_vip/src/slave_agent/slave_monitor.sv(117) @ 1157370000: uvm_test_top.envh.ragent.monh [slave_monitor] rx data =o
+# UVM_INFO uart_vip/src/slave_agent/slave_monitor.sv(117) @ 1178450000: uvm_test_top.envh.ragent.monh [slave_monitor] rx data =t
+# UVM_INFO uart_vip/src/slave_agent/slave_monitor.sv(117) @ 1199530000: uvm_test_top.envh.ragent.monh [slave_monitor] rx data =i
+# UVM_INFO uart_vip/src/slave_agent/slave_monitor.sv(117) @ 1220610000: uvm_test_top.envh.ragent.monh [slave_monitor] rx data =n
+# UVM_INFO uart_vip/src/slave_agent/slave_monitor.sv(117) @ 1241690000: uvm_test_top.envh.ragent.monh [slave_monitor] rx data =g
+# UVM_INFO uart_vip/src/slave_agent/slave_monitor.sv(117) @ 1262770000: uvm_test_top.envh.ragent.monh [slave_monitor] rx data =.
+# UVM_INFO uart_vip/src/slave_agent/slave_monitor.sv(117) @ 1283850000: uvm_test_top.envh.ragent.monh [slave_monitor] rx data =.
+# UVM_INFO uart_vip/src/slave_agent/slave_monitor.sv(115) @ 1310750000: uvm_test_top.envh.ragent.monh [slave_monitor] rx data =  13
+# UVM_INFO uart_vip/src/slave_agent/slave_monitor.sv(115) @ 1321360000: uvm_test_top.envh.ragent.monh [slave_monitor] rx data =  10
+# 11111111
+# UVM_INFO uart_vip/src/master_agent/master_monitor.sv(115) @ 1356880000: uvm_test_top.envh.wagent.monh [master_monitor] tx data =  12
+# ------------------------------------------------------------------------------------
+# Name                           Type        Size  Value                              
+# ------------------------------------------------------------------------------------
+# req                            master_xtn  -     @877                               
+#   tx_data                      integral    8     'b10111011                         
+#   begin_time                   time        64    1357410000                         
+#   depth                        int         32    'd2                                
+#   parent sequence (name)       string      5     m_seq                              
+#   parent sequence (full name)  string      35    uvm_test_top.envh.wagent.seqr.m_seq
+#   sequencer                    string      29    uvm_test_top.envh.wagent.seqr      
+# ------------------------------------------------------------------------------------
+# 00000000
+# UVM_INFO uart_vip/src/master_agent/master_monitor.sv(115) @ 1370420000: uvm_test_top.envh.wagent.monh [master_monitor] tx data = 187
+# 11111111
+# 00000000
+# UVM_INFO uart_vip/src/slave_agent/slave_monitor.sv(115) @ 1439860000: uvm_test_top.envh.ragent.monh [slave_monitor] rx data = 187
+# UVM_INFO scoreboard.sv(41) @ 1439860000: uvm_test_top.envh.scb [scoreboard:] ---Loop Back Test passed---
+# 11111111
+# ** Note: $finish    : hx8kdemo_tb.sv(107)
+#    Time: 10 ms  Iteration: 1  Instance: /testbench
+# Saving coverage database on exit...
+# End time: 12:38:00 on Mar 09,2025, Elapsed time: 0:00:15
+# Errors: 0, Warnings: 62
